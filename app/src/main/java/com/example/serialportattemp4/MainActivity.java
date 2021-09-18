@@ -37,6 +37,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        try {
+            MyHttpServer server = new MyHttpServer();
+            server.start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
