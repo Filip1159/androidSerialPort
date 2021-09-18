@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(this, "NO PERMISSION :( :(", Toast.LENGTH_SHORT).show();
                     PendingIntent usbPermissionIntent = PendingIntent.getBroadcast(this, 0, new Intent(BuildConfig.APPLICATION_ID + ".GRANT_USB"), 0);
                     usbManager.requestPermission(driver.getDevice(), usbPermissionIntent);
-
                 }
                 return;
             }
